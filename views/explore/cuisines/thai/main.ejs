@@ -1,10 +1,11 @@
-<%- include('../partials/header') %> 
+<%- include('../../../partials/header') %> 
+
+<h3 class="h3">Thai Recipe's</h3>
 
 <table class="table">
     <thead>
       <tr>
         <th class="h5" scope="col">Name</th><br>
-        <th class="h5" scope="col">Cuisine</th>
         <th class="h5" scope="col">Ingredients</th>
         <th class="h5" scope="col">Description</th>
         <th class="h5" scope="col">Personal Rating</th>
@@ -14,13 +15,10 @@
             <% recipes.forEach(function(r) { %>
             <tr>
                 <th class="h6" scope="row"><%= r.name %></th>
-                <th class="h6" scope="row"><%= r.cuisine %></th>
                 <th class="h6" scope="row"><%= r.ingredients %></th>
                 <th class="h6" scope="row"><%= r.description %></th>
                 <th class="h6" scope="row"><%= r.personalRating %></th>
                 <td><a href="/recipe/view?id=<%= r._id %>">VIEW</a></td>
-                <td><a href="/recipe/edit?id=<%= r._id %>">EDIT</a></td>
-                <td><a href="/recipe/delete?id=<%= r._id %>">DELETE</a></td>
 
             </tr>
             <% }); %>
@@ -29,4 +27,6 @@
     
     </table>
 
-<%- include('../partials/footer') %> 
+
+
+<%- include('../../../partials/footer') %> 
