@@ -1,13 +1,28 @@
 <%- include('../views/partials/header') %> 
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to  the <%= title %></p>
+<br><br>
+  <body class="text-center">
+    <p class="h4">Welcome to  the <%= title %></p>
   </body>
+<br><br>
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://wallpaperaccess.com/full/165212.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://static.onecms.io/wp-content/uploads/sites/23/2020/06/23/italian-food-2000.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.squarespace-cdn.com/content/v1/612d4825ee7c3b7ba3e215b7/1630669888695-NJ2U8SWF295VEWXG2LXP/shutterstock_1844538637.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 </html>

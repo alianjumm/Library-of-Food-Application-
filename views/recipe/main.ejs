@@ -1,32 +1,32 @@
 <%- include('../partials/header') %> 
 
-<table id="list">
+<table class="table">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Cuisine</th>
-        <th>Ingredients</th>
-        <th>Description</th>
-        <th>Personal Rating</th>
-        <th></th>
+        <th class="h5" scope="col">Name</th><br>
+        <th class="h5" scope="col">Cuisine</th>
+        <th class="h5" scope="col">Ingredients</th>
+        <th class="h5" scope="col">Description</th>
+        <th class="h5" scope="col">Personal Rating</th>
       </tr>
     </thead>
     <tbody>
-      <% recipes.forEach(function(r) { %>
-        <tr>
-            <td><%= r.name %></td>
-          <td><%= r.cuisine %></td>
-          <td><%= r.ingredients %></td>
-          <td><%= r.description %></td>
-          <td><%= r.personalRating %></td>
-          <td><a href="/recipe/view?id=<%= r._id %>">VIEW</a></td>
-          <td><a href="/recipe/edit?id=<%= r._id %>">UPDATE</a></td>
-          <td><a href="/recipe/delete?id=<%= r._id %>" onClick=" confirm('Delete this recipe?')">DELETE</a></td>
+            <% recipes.forEach(function(r) { %>
+            <tr>
+                <th class="h6" scope="row"><%= r.name %></th>
+                <th class="h6" scope="row"><%= r.cuisine %></th>
+                <th class="h6" scope="row"><%= r.ingredients %></th>
+                <th class="h6" scope="row"><%= r.description %></th>
+                <th class="h6" scope="row"><%= r.personalRating %></th>
+                <td><a href="/recipe/view?id=<%= r._id %>">VIEW</a></td>
+                <td><a href="/recipe/edit?id=<%= r._id %>">UPDATE</a></td>
+                <td><a href="/recipe/delete?id=<%= r._id %>">DELETE</a></td>
 
-        </tr>
-        <% }); %>
-
+            </tr>
+            <% }); %>
+        </div>
       </tbody>
+    
     </table>
 
 <%- include('../partials/footer') %> 

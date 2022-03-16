@@ -1,16 +1,18 @@
 <%- include('../partials/header') %> 
 
-<h1>
+<br>
+<br>
+<h1 class="h3">
     Edit Recipe
 </h1>
 
 <form method="post" action="/recipe/update?_method=PUT">
 
-    <div>
+    <div class="form-group">
         <label>Name</label>
-        <input type="text" name="name" value="<%= recipe.name %>">
+        <input type="text" class="form-control" name="name" value="<%= recipe.name %>">
     </div>
-
+<br>
     <div>
         <label>Cuisine</label>
         <div class="form-group">
@@ -24,25 +26,32 @@
             <option value="mediterranean">Mediterranean</option>
         </select>
     </div>
-
-    <div>
+<br>
+    <div class="form-group">
         <label>Ingredients</label>
-        <input type="text" name="ingredients" value="<%= recipe.ingredients %>">
+        <textarea type="text" name="ingredients" class="form-control" value="<%= recipe.ingredients %>"></textarea>
     </div>
-
-    <div>
+<br>
+    <div class="form-group">
         <label>Description</label>
-        <input type="text" name="description" value="<%= recipe.ingredients %>">
+        <textarea type="text" name="description" class="form-control" value="<%= recipe.ingredients %>"></textarea>
     </div>
-
-    <div>
+<br>
+    <div class="form-group">
         <label>Personal Rating</label>
-        <input type="text" name="personalRating" value="<%= recipe.personalRating %>">
+        <select type="text" name="personalRating" value="<%= recipe.personalRating %>">
+            <option value="">Select Rating</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
     </div>
-
+<br>
     <input type="hidden" name="id" value="<%= recipe._id %>">
 
-    <button type="submit">Edit Recipe</button>
+    <button type="submit" class="btn btn-primary">Edit Recipe</button>
 
 </form>
 

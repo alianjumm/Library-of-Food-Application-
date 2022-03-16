@@ -1,25 +1,31 @@
 <%- include('../partials/header') %> 
+<br><br>
+<h2 class="h3"> <%= recipe.name %> </h2>
+<br><br>
 
-<h2> <%= recipe.name %> </h2>
+<dl class="row">
+    <dt class="col-sm-3">Cuisine: </dt>
+    <dd class="col-sm-9"><%= recipe.cuisine %></dd>
+</dl>
 
-<div>
-    Cuisine: <%= recipe.cuisine %>
-</div>
+<dl class="row">
+    <dt class="col-sm-3">Ingredients: </dt>
+    <dd class="col-sm-9"><%= recipe.ingredients %></dd>
+</dl>
 
-<div>
-    Ingredients: <%= recipe.ingredients %>
-</div>
+<dl class="row">
+    <dt class="col-sm-3">Description: </dt>
+    <dd class="col-sm-9"><%= recipe.description %> </dd>
+</dl>
 
-<div>
-    Description: <%= recipe.description %>
-</div>
+<dl class="row">
+    <dt class="col-sm-3">Personal Rating: </dt>
+    <dd class="col-sm-9"><%= recipe.personalRating %> </dd>
+</dl>
 
-<div>
-    Personal Rating: <%= recipe.personalRating %>
-</div>
-
-<div>
-    Created At: <%= moment(recipe.createdAt).fromNow() %>
-</div>
+<dl class="row">
+    <dt class="col-sm-3">Created At: </dt>
+    <dd class="col-sm-9"><%= moment(recipe.createdAt).fromNow() %> </dd>
+</dl>
 
 <%- include('../partials/footer') %> 
