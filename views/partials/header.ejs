@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <title>Header</title>
+</head>
+<body>
+  <nav>
+    <img id="plane-photo">
+    <a href="/recipe/mine">MY RECIPE'S</a>
+    <a href="/recipe/explore">EXPLORE</a>
+    <a href="/recipe/recent">RECENT</a>
+    <% if(!currentUser) { %>
+    <a href="/auth/signin">SIGN IN</a>
+    <% } else { %>
+        <a href="/recipe/add">ADD RECIPE</a>
+    <a href="/auth/logout">LOG OUT</a>
+    <% } %>
+  </nav>
+  <main>

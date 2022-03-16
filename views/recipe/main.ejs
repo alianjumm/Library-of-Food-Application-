@@ -1,0 +1,32 @@
+<%- include('../partials/header') %> 
+
+<table id="list">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Cuisine</th>
+        <th>Ingredients</th>
+        <th>Description</th>
+        <th>Personal Rating</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% recipes.forEach(function(r) { %>
+        <tr>
+            <td><%= r.name %></td>
+          <td><%= r.cuisine %></td>
+          <td><%= r.ingredients %></td>
+          <td><%= r.description %></td>
+          <td><%= r.personalRating %></td>
+          <td><a href="/recipe/view?id=<%= r._id %>">VIEW</a></td>
+          <td><a href="/recipe/edit?id=<%= r._id %>">UPDATE</a></td>
+          <td><a href="/recipe/delete?id=<%= r._id %>" onClick=" confirm('Delete this recipe?')">DELETE</a></td>
+
+        </tr>
+        <% }); %>
+
+      </tbody>
+    </table>
+
+<%- include('../partials/footer') %> 

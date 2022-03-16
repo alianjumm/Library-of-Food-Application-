@@ -8,10 +8,12 @@ const updateSchema = new Schema({
   });
 
 const recipeSchema = new Schema({
-    cuisine: {type: String, default: 'Chinese', enum: ['Korean', 'Mexican', 'Indian', 'Thai', 'Italian', 'Mediterranean']},
+    name: {type: String},
+    user: {type: Schema.Types.ObjectId, ref: 'User'},
+    cuisine: {type: String, default: 'korean', enum: ['korean', 'mexican', 'indian', 'thai', 'italian', 'mediterranean']},
     ingredients: {type: String}, 
     description: {type: String},
-    personalRating: {type: Number, min: 1, max: 10},
+    personalRating: {type: Number},
     update: [updateSchema],
 }, {
     timestamps: true

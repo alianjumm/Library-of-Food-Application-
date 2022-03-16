@@ -1,0 +1,25 @@
+<%- include('../partials/header') %> 
+
+<h2> <%= recipe.name %> </h2>
+
+<div>
+    Cuisine: <%= recipe.cuisine %>
+</div>
+
+<div>
+    Ingredients: <%= recipe.ingredients %>
+</div>
+
+<div>
+    Description: <%= recipe.description %>
+</div>
+
+<div>
+    Personal Rating: <%= recipe.personalRating %>
+</div>
+
+<div>
+    Created At: <%= moment(recipe.createdAt).fromNow() %>
+</div>
+
+<%- include('../partials/footer') %> 

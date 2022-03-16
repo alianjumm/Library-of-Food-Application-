@@ -1,0 +1,26 @@
+<%- include('../partials/header') %> 
+
+<table id="list">
+    <thead>
+      <tr>
+        <th> <%= recipe.name %></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% recipes.forEach(function(r) { %>
+        <tr>
+            <td><%= r.name %></td>
+          <td><%= r.description %></td>
+          <td><%= r.personalRating %></td>
+          <td><a href="/recipe/view?id=<%= r._id %>">VIEW</a></td>
+
+        </tr>
+        <% }); %>
+
+      </tbody>
+    </table>
+
+
+
+<%- include('../partials/footer') %> 
