@@ -13,7 +13,8 @@ function index_add_get(req, res) {
 }
 
 async function index_add_post(req,res) {
-    console.log(req.user)
+    console.log(req.user);
+    console.log(req.user._id);
     req.body.user = req.user._id;
     await Recipe.create(req.body);
     res.redirect('/recipe/mine');
