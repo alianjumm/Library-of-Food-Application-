@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://127.0.0.1:27017/project',
+mongoose.connect('mongodb+srv://alianjumm:ali786@cluster0.abvn6.mongodb.net/ProjectDatabase?retryWrites=true&w=majority',
 { useNewUrlParser: true }
 );
 

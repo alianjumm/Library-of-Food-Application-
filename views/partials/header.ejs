@@ -10,7 +10,7 @@
   <title>Header</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">Library of Food</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,15 +18,19 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                <a class="nav-link active" aria-current="page" href="/">HOME</a>
                 <a class="nav-link" href="/recipe/mine">MY RECIPE'S</a>
                 <a class="nav-link" href="/recipe/explore">EXPLORE</a>
-                <a class="nav-link" href="/recipe/recent">RECENT</a>
                 <% if(!currentUser) { %>
+                <div class="ms-auto">
                 <a class="nav-link" href="/auth/signin">SIGN IN</a>
+                </div>
                 <% } else { %>
                     <a class="nav-link" href="/recipe/add">ADD RECIPE</a>
-                <a class="nav-link" href="/auth/logout">LOG OUT</a>
+                <div class="ms-auto">
+                    <a class="nav-link" href="/auth/logout">LOG OUT</a>
+                    
+                </div>
                 <% } %>
             </div>
         </div>
