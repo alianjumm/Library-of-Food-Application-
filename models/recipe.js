@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const updateSchema = new Schema({
-    updates: {type: String}
+const reviewSchema = new Schema({
+    review: {type: String}
   }, {
     timestamps: true
   });
@@ -14,7 +14,7 @@ const recipeSchema = new Schema({
     ingredients: {type: String}, 
     description: {type: String},
     personalRating: {type: Number},
-    update: [updateSchema],
+    reviews: [reviewSchema],
 }, {
     timestamps: true
 });
