@@ -16,6 +16,8 @@ let session = require('express-session');
 var app = express();
 
 // view engine setup
+const PORT = process.env.PORT;
+app.listen(PORT, () => console.log(`App is running on ${PORT}`));
 
 app.use(session({
   secret: process.env.secret,
