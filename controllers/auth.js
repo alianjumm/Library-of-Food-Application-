@@ -13,7 +13,10 @@ exports.auth_signup_get = (req, res) => {
 
 // HTTP POST - Signup - to post the data
 exports.auth_signup_post = (req, res) => {
+  console.log(req.file)
+    let imagPath = '/assets/' + req.file.filename;
     let user = new User(req.body);
+    user.profilePicture = imagPath;  
     console.log(req.body);
     let hash = bcrypt.hashSync(req.body.password, salt);
     console.log(hash);

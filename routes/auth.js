@@ -1,5 +1,17 @@
 const router = require('express').Router();
 const {body} = require('express-validator');
+const multer = require('multer');
+
+let storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, './public/assets/')
+    },
+    filename: function (req, file, cb) {
+      cb(null, file.fieldname + '-' + Date.now() + '-' + file.originalname)
+    }
+  })
+
+var upload = multer({ storage: storage })
 
 // Import Authentication Controller
 const authCntrl = require("../controllers/auth");
@@ -12,7 +24,8 @@ router.post("/auth/signup", [
     body('lastName').isLength({min : 5}),
     body('emailAddress').isEmail(),
     body('password').isLength({min : 5})
-] , authCntrl.auth_signup_post);
+] , upload.single('image'),
+ authCntrl.auth_signup_post);
 
 router.get("/auth/signin", authCntrl.auth_signin_get);
 router.post("/auth/signin", authCntrl.auth_signin_post);

@@ -28,4 +28,26 @@
     <dd class="col-sm-9"><%= moment(recipe.createdAt).fromNow() %> </dd>
 </dl>
 
+<div>
+    <form id="add-reivews-form" method="POST" action="/recipe/view/reviews?id=<%= recipe._id %>">
+        <label>Leave a review: </label> <br><br>
+        <textarea name="review" class="form-control"></textarea> <br>
+        <button type="submit" class="btn btn-dark">Add Review</button>
+    </form>
+</div>
+<br><br>
+<div>
+    <h5><b>Reviews</b></h5> <br>
+<% recipe.reviews.forEach(function(r){ %>
+<div>
+    <blockquote class="blockquote text-right">
+        <p class="mb-0"><%= r.review %> </p> <br>
+        <footer class="blockquote-footer"><%= moment(r.createdAt).fromNow() %></footer>
+    </blockquote>
+</div>
+
+<% }) %>
+
+</div>
+
 <%- include('../partials/footer') %> 

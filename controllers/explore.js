@@ -16,8 +16,16 @@ async function index_recipe_get(req,res) {
     res.render(`explore/cuisines/${req.params.cuisine}/view`, {recipe})
 }
 
+async function addReview(req,res) {
+    let review = await Recipe.findById(req.params.id);
+    Recipe.reviews.push(req.body)
+    await review.save();
+    res.redirect(`/recipe/view/${req.params.id}`);
+}
+
 module.exports = {
     index_cuisines_get,
     index_get,
-    index_recipe_get
+    index_recipe_get,
+    addReview
 }

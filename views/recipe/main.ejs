@@ -1,5 +1,15 @@
 <%- include('../partials/header') %> 
 
+<br>
+<div class="image-container">
+  <% if(currentUser.profilePicture) { %>
+    <p> Hello, Chef <%= currentUser.firstName %>! </p>
+    <img class="img-thumbnail" src="<%= currentUser.profilePicture %>" >
+  <% } %>
+</div>
+
+<br><br><br> <br><br><br><br>
+
 <table class="table">
     <thead>
       <tr>

@@ -43,6 +43,14 @@ async function recipe_delete_get(req,res) {
     res.redirect('/recipe/mine')
 }
 
+async function addReview(req,res) {
+    let recipe = await Recipe.findById(req.query.id);
+    console.log(recipe)
+    recipe.reviews.push(req.body)
+    await recipe.save();
+    res.redirect(`/recipe/view?id=${req.query.id}`);
+}
+
 module.exports = {
     index_main_get,
     index_add_get,
@@ -50,6 +58,7 @@ module.exports = {
     index_view_get,
     recipe_edit_get,
     recipe_update_put,
-    recipe_delete_get
+    recipe_delete_get,
+    addReview
 
 }

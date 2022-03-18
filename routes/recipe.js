@@ -11,5 +11,6 @@ router.get('/recipe/view', recipeCtrl.index_view_get);
 router.get('/recipe/edit', isLoggedIn, recipeCtrl.recipe_edit_get);
 router.put('/recipe/update', isLoggedIn, recipeCtrl.recipe_update_put);
 router.get("/recipe/delete", isLoggedIn, recipeCtrl.recipe_delete_get);
+router.post('/recipe/view/reviews', recipeCtrl.addReview);
 
 module.exports = router;

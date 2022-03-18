@@ -11,3 +11,10 @@ a {
   width: 100%;
   
 }
+
+.image-container {
+  width: 100px;
+  height: 100px;
+  word-wrap: normal;
+}
+
