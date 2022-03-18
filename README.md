@@ -1,4 +1,4 @@
-Library of Food
+### Library of Food
 
 Welcome everyone to the Library of Food!
 
@@ -10,18 +10,18 @@ You can also explore recipes sorted by specific cuisines incase you are in the m
 
 Create your own recipes, review other people's recipes, enagage, be kind, and be adventerous!
 
-Screenshots:
+## Screenshots:
 
-![Alt text](https://imgur.com/a/2dzv5vh)
+![Main Page](public/assets/1.PNG)
 ---
-![Alt text](https://imgur.com/a/I7CZYzZ)
+![My Recipe's](public/assets/2.PNG)
 ---
-![Alt text](https://imgur.com/a/gwKZAAA)
+![Explore Page](public/assets/3.PNG)
 ---
-![Alt text](https://imgur.com/a/7NEHTSW)
+![View a recipe and leave a review!](public/assets/4.PNG)
 ---
 
-Technologies Used:
+## Technologies Used:
 
 - HTML
 - CSS
@@ -34,7 +34,7 @@ Technologies Used:
 - Multer
 - Connect Flash
 
-Getting Started 
+## Getting Started 
 
 ### [Library of Food](https://libraryoffood.herokuapp.com/)
 
